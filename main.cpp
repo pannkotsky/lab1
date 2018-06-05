@@ -36,7 +36,7 @@ public:
 };
 
 void printN(const char *s, int n);
-double random(double lower, double upper, double step);
+double random(double lower, double upper, double delta);
 void printTableTop(int n_columns, int column_sizes[]);
 void printTableMiddle(int n_columns, int column_sizes[]);
 void printTableBottom(int n_columns, int column_sizes[]);
@@ -44,7 +44,7 @@ void printTableBottom(int n_columns, int column_sizes[]);
 
 int main() {
     setlocale(LC_ALL, "");
-    srand (time(NULL));
+    srand(time(NULL));
 
     FuncInfo info = FuncInfo(2.0, 12.0, 0.5, -5.0, 5.0);
     info.Tab();
